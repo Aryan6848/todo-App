@@ -1,0 +1,82 @@
+<style>
+body{
+    font-family:Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin:0;
+  padding:0;
+}
+.navbar{
+    background-color: #333;
+    padding : 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* to vertically center elements */
+  }
+  
+  .navbar ul {
+    list-style:none;
+    margin: 0;
+    padding:0;
+    display:flex;
+  }
+  
+  .navbar li{
+    margin-right: 20px;
+  }
+  
+  .navbar a{
+    text-decoration: none;
+    color: #fff;
+    padding:15px 10px;
+    line-height:30px;
+  }
+  
+  .welcome-profile{
+    display: flex;
+    align-items: center;
+  }
+  .welcome-text{
+    color: #fff;
+    margin:0;
+    margin-top:5px;
+    /* padding: 15 px; */
+    margin-right: 10px; 
+    
+  }
+ 
+  .profile{
+      margin:0;
+      margin-top:5px;
+      /* margin-left:10px; */
+  }
+  /* the display flex property of .navbar and justify-content:space-between property of .navbar class will align the navigation links to the left and the Welcome text to the rigth .  */
+  
+  .navbar a:hover{
+    background-color: #555;
+    border-radius:5px;
+  }
+
+
+
+</style>
+
+
+<nav class = "navbar">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="about">About</a>
+      </li>
+      <li>
+        <a href="contact">Contact</a>
+      </li>
+    </ul>
+    <div class="welcome-profile">
+    <p class="welcome-text">Welcome &ensp;<%= username %></p>
+    <!-- this &ensp; is for space and this can be written in html no need of ejs -->
+    <img class="profile" src="<%= profilePic %>" style="height:40px">
+  </div>
+  </nav> 

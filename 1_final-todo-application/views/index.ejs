@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- navbar -->
+
+<%- include("components/header",{username: username ,profilePic: profilePic})%>
+<!-- ye uername bhi aise pass kr skte ho pr agar nhi bhi krogr tbhi wo automatically le lega ,jo bhi server se ayega uske leke bhej dega header.ejs ko likhne ki jaroorat nhi h, but likh dena chahiye jisse koi ar code read kre to usko dikkat na jae  -->
+
+<!-- navbar -->
+  <div class = "container">
+
+    <h1>Todo App</h1>
+    <div id="add-todo">
+        <input id ="userInput" type="text" placeholder = "Add a new todo">
+        <button id = "add-btn">Add</button>
+    </div>
+    <div class ="edit-todo-template" style ="display:none;">
+      <input type ="text" class ="edit-todo-input">
+      <button class="save-btn">Save</button>
+    </div>
+    <div id = "todo-list">
+      <!-- <div id ="todo-item">
+        <input type="checkbox"  class ="checkbox">
+        <div id = "todo-content">Sample Todo 1</div>
+        <button id="edit-btn">Edit</button>
+        <button id=""delete-btn>Delete</button>
+      </div>
+
+      <div id ="todo-item">
+        <input type="checkbox"  class ="checkbox">
+        <div id = "todo-content">Sample Todo 2</div>
+        <button id="edit-btn">Edit</button>
+        <button id=""delete-btn>Delete</button>
+      </div> -->
+    </div>
+
+  </div>
+
+  <script src="./scriptcopy.js"></script>
+</body>
+</html>
